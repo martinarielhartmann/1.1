@@ -16,13 +16,13 @@ function [c,s] = segmentgestalt(nmat,fig)
 %
 % References:
 % Tenney, J.  & Polansky, L. (1980). Temporal gestalt perception
-%     in music. Journal of Music Theory, 24(2), 205–41.
+%     in music. Journal of Music Theory, 24(2), 205â€“41.
 %
 % Authors:
 %  Date		Time	Prog	Note
 % 20.2.2003	18:44	PT	Created under MATLAB 5.3 (Macintosh)
 % 20.3.2004	15:04	TE	Created under MATLAB 5.3 (PC)
-%© Part of the MIDI Toolbox Software Package, Copyright © 2004, University of Jyvaskyla, Finland
+%Â© Part of the MIDI Toolbox Software Package, Copyright Â© 2004, University of Jyvaskyla, Finland
 % See License.txt
 
 if isempty(nmat), return; end
@@ -89,3 +89,6 @@ j=find(c>0);
 z=zeros(1,length(nmat));
 z(j(segment_index))=1;
 s=z';
+
+c = circshift(c,-1);
+s = circshift(s,-1);
